@@ -60,7 +60,7 @@ lib.fix (
 
     man-docs = pkgs.callPackage ./man { inherit options-json; };
   }
-  // lib.optionalAttrs (!pkgs.stdenv.isDarwin) {
+  // {
     # NuschtOS/search does not seem to work on darwin
     search = nuschtosSearch.packages.mkSearch {
       optionsJSON = options-json + "/share/doc/nixos/options.json";
