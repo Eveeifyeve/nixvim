@@ -4,9 +4,7 @@
   };
 
   no-packages = {
-    plugins.yuck = {
-      enable = true;
-      yuckPackage = null;
-    };
+    plugins.yuck.enable = true;
+    dependencies.yuck.enable = false;
   };
 }
